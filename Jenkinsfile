@@ -5,9 +5,6 @@ pipeline {
     }
     stages {
         stage('Build and Test') {
-            agent { node{
-                       label "jenkins"}
-            } 
             steps {
                 sh 'mvn clean package'
                 sh 'echo "build ran"'
